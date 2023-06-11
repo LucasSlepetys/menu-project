@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import data from './data';
-import Categories from './Categories';
+import Categoriess from './Categoriess';
 import Menu from './Menu';
 
 //adding all categories from data.js to a list
@@ -30,7 +30,7 @@ const App = () => {
     <main>
       <h1 className='title'>Our Menu</h1>
       <div className='title-underline'></div>
-      <Categories filtering={filtering} categories={categories} />
+      <Categoriess filtering={filtering} categories={categories} />
       <Menu listOfItems={listOfItems} />
     </main>
   );
