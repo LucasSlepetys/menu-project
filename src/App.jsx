@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import data from './data';
-import Menu from './Menu';
+import Categories from './menuComponent/Categories';
+import Menu from './menuComponent/Menu';
 
 //adding all categories from data.js to a list
 const allCategories = ['all'];
@@ -28,24 +29,9 @@ const App = () => {
   return (
     <main>
       <h1 className='title'>Our Menu</h1>
-      <Menu filtering={filtering} categories={categories} />
-      <div className='section-center'>
-        {listOfItems.map((item) => {
-          const { id, title, price, img, desc } = item;
-          return (
-            <article key={id} className='menu-item'>
-              <img className='img' src={img} alt={title} />
-              <div className='item-info'>
-                <header>
-                  <h5>{title}</h5>
-                  <span className='item-price'>{price}</span>
-                </header>
-                <p className='item-text'>{desc}</p>
-              </div>
-            </article>
-          );
-        })}
-      </div>
+      <div className='title-underline'></div>
+      <Categories filtering={filtering} categories={categories} />
+      <Menu listOfItems={listOfItems} />
     </main>
   );
 };
