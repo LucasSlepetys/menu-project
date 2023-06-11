@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import data from './data';
-import Categories from './menuComponent/Categories';
-import Menu from './menuComponent/Menu';
+import Categories from './menu_component/Categories';
+import Menu from './menu_component/Menu';
 
 //adding all categories from data.js to a list
 const allCategories = ['all'];
